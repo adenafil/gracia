@@ -1,5 +1,8 @@
 #!/bin/bash
 
-source 'helper\airplane_mode.sh'
+source "$PWD/helper/airplane_mode.sh"
 
-enable_airplane_mode "fd826600"
+enable_airplane_mode "1d5d6a027d24"
+sleep 5
+disable_airplane_mode "1d5d6a027d24"
+
