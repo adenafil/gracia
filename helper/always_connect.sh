@@ -12,14 +12,15 @@ while true; do
     # Wget URL dan simpan responsnya dalam sebuah variabel
     
     response=$(
-        adb -s fd826600 shell wget --server-response -0 /dev/null ${connection[0]} 2>&1 | grep "HTTP/" | awk '{print $2}'
+        adb -s fd826600 shell wget --server-response --spider -o /dev/null 
+        "$connection[0]}" 2>&1 | grep "HTTP/" | awk '{print $2}
     )
 
     echo $response
     echo "end"
     
-    Periksa respons
-    if [ "$response" == "502" ]; then
+    #Periksa respons
+    if [ "$response" == "404" ]; then
         echo "Respons OK (HTTP 200). Lanjutkan..."
     else
         echo "Terjadi kesalahan pada respons. Mengaktifkan mode pesawat..."
