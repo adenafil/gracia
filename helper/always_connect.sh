@@ -12,10 +12,11 @@ while true; do
     # Wget URL dan simpan responsnya dalam sebuah variabel
     
     response=$(
-        adb -s fd826600 shell wget --server-response -0 /dev/null quiz.vidio.com 2>&1 | grep "HTTP/" | awk '{print $2}'
+        adb -s fd826600 shell wget --server-response -0 /dev/null ${connection[0]} 2>&1 | grep "HTTP/" | awk '{print $2}'
     )
 
-    echo $respons
+    echo $response
+    echo "end"
     
     # Periksa respons
     # if [ "$response" == "200" ]; then
