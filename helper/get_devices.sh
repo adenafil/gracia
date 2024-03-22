@@ -1,8 +1,5 @@
 #!/bin/bash
 
-#!/bin/bash
-
-
 # Menjalankan adb devices dan menyimpan outputnya ke dalam sebuah variabel
 device_list=$(adb devices | grep -v "List of devices attached" | awk '{print $1}')
 
