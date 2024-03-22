@@ -1,10 +1,9 @@
 #!/bin/bash
 
 enable_airplane_mode() {
-    adb -s $device shell cmd connectivity airplane-mode enable
+    adb -s $1 shell cmd connectivity airplane-mode enable
 }
 
-enable_airplane_mode() {
-    adb -s $device shell cmd connectivity airplane-mode disable
+disable_airplane_mode() {
+    adb -s $1 shell cmd connectivity airplane-mode disable
 }
-
