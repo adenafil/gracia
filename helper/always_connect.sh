@@ -12,8 +12,7 @@ while true; do
     # Wget URL dan simpan responsnya dalam sebuah variabel
     
     response=$(
-        adb -s fd826600 shell wget --server-response --spider -o /dev/null 
-        "$connection[0]}" 2>&1 | grep "HTTP/" | awk '{print $2}
+        adb -s 'fd826600' wget --server-response --spider -O /dev/null "https://example.com" 2>&1 | grep "HTTP/" | awk '{print $2}'
     )
 
     echo $response
