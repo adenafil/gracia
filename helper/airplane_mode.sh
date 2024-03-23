@@ -9,11 +9,15 @@ disable_airplane_mode() {
 }
 
 enable_airplane_mode_on_smartphone() {
-    adb shell cmd connectivity
-    airplane-mode enable
+    adb shell cmd connectivity airplane-mode enable
 }
 
 disable_airplane_mode_on_smartphone() {
-    adb shell cmd connectivity
-    airplane-mode disable
+    adb shell cmd connectivity airplane-mode disable
+}
+
+get_suitable_host_on_smartphone() {
+    enable_airplane_mode_on_smartphone
+    sleep 30
+    disable_airplane_mode_on_smartphone
 }
