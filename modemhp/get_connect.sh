@@ -1,5 +1,7 @@
 #!/bin/bash
 
+source "$PWD/../helper/airplane_mode.sh"
+
 while true; do
     # Lakukan Curl ke server dan simpan output ke dalam variabel
     response=$(curl -s -I server.com)
