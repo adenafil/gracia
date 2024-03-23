@@ -9,14 +9,13 @@ while true; do
     # Periksa apakah Curl berhasil
     if [[ $response == *"Could not resolve host"* ]]; then
         echo "Gagal menge-resolve domain"
+        get_suitable_host_on_smartphone
     elif [[ $response == *"HTTP/1.1 200"* ]]; then
         echo "Sukses curl - Status: 200 OK"
-    else
-        echo "Gagal curl - Status: $response"
-        get_suitable_host_on_smartphone
     fi
 
     # Istirahat sebelum melakukan percobaan lagi
-    sleep 5
+    echo "device need taking time to loop again"
+    sleep 10
 done
 

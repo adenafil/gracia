@@ -18,6 +18,6 @@ disable_airplane_mode_off_smartphone() {
 
 get_suitable_host_on_smartphone() {
     enable_airplane_mode_on_smartphone
-    sleep 30
+    sleep 15
     disable_airplane_mode_off_smartphone
 }
