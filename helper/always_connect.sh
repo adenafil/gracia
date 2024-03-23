@@ -29,6 +29,6 @@ while true; do
         # disable_airplane_mode
     fi
     
-    Tunda eksekusi selama 30 detik sebelum memeriksa kembali
+    # Tunda eksekusi selama 30 detik sebelum memeriksa kembali
     sleep 30
 done
