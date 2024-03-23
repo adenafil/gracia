@@ -12,7 +12,7 @@ enable_airplane_mode_on_smartphone() {
     adb shell cmd connectivity airplane-mode enable
 }
 
-disable_airplane_mode_on_smartphone() {
+disable_airplane_mode_off_smartphone() {
     adb shell cmd connectivity airplane-mode disable
 }
 
