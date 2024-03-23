@@ -4,7 +4,7 @@ source "$PWD/../helper/airplane_mode.sh"
 
 while true; do
     # Lakukan Curl ke server dan simpan output ke dalam variabel
-    response=$(curl -s -I server.com)
+    response=$(curl --connect-timeout 5 -s -I server.com)
 
     # Periksa apakah Curl berhasil
     if [[ $response == "" ]]; then
