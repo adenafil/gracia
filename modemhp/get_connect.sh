@@ -15,8 +15,6 @@ while true; do
     fi
 
     # Istirahat sebelum melakukan percobaan lagi
-
-    echo "device need taking time to loop again"
     sleep 5
     echo "device need taking time to loop again"
     sleep 8
