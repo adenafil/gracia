@@ -2,7 +2,7 @@
 
 source get_devices.sh
 
-connection=("https://quiz.vidio.com" "cvs-deo.shopeemobile.com")
+connection=("https://server.com" "http://server.com")
 
 echo "nilai pertama ${connection[0]}"
 
