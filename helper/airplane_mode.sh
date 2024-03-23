@@ -20,4 +20,5 @@ get_suitable_host_on_smartphone() {
     enable_airplane_mode_on_smartphone
     sleep 15
     disable_airplane_mode_off_smartphone
+    sleep 10
 }
