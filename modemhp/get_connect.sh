@@ -16,7 +16,7 @@ while true; do
         echo "$(date) : offline (302)"
         write_log "offline (302)"
         get_suitable_host_on_smartphone
-    elif [[ $response == *"HTTP/1.1 301"* ]]; then
+    elif [[ $response == *"HTTP/2 301"* ]]; then
         echo "$(date) : online(301)"
     elif [[ $response == *"HTTP/2 404"* ]]; then
         echo "$(date) : online(404)"

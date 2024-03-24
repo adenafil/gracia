@@ -1,6 +1,6 @@
 #!/bin/bash
 
-source "$PWD/../log.sh"
+source "$PWD/../log/log.sh"
 
 #this method is used to enable airplane mode
 #on android by using adb API and this method need
