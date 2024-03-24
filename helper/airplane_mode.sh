@@ -1,7 +1,5 @@
 #!/bin/bash
 
-source "$PWD/../log/log.sh"
-
 #this method is used to enable airplane mode
 #on android by using adb API and this method need
 #parameter, you can get that parameter by using

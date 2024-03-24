@@ -1,6 +1,7 @@
 #!/bin/bash
-source "$PWD/../helper/airplane_mode.sh"
-source "$PWD/../log/log.sh"
+
+# source "$PWD/../helper/airplane_mode.sh"
+# source "$PWD/../log/log.sh"
 
 connect() {
     while true; do
@@ -16,10 +17,8 @@ connect() {
         echo "$(date) : offline (302)"
         write_log "offline (302)"
         get_suitable_host_on_smartphone
-    elif [[ $response == *"HTTP/2 301"* ]]; then
-        echo "$(date) : online(301)"
-    elif [[ $response == *"HTTP/2 404"* ]]; then
-        echo "$(date) : online(404)"
+    elif [[ $response == *"HTTP/2 404"* || $response == *"HTTP/2 301"* || $response == *"HTTP/2 404"* ]]; then
+        echo "$(date) : online"
     fi
 
     # Istirahat sebelum melakukan percobaan lagi
