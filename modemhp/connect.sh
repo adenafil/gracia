@@ -1,11 +1,11 @@
 #!/bin/bash
-
 source "$PWD/../helper/airplane_mode.sh"
 source "$PWD/../log/log.sh"
 
-while true; do
+connect() {
+    while true; do
     # Lakukan Curl ke server dan simpan output ke dalam variabel
-    response=$(curl --connect-timeout 2 -s -I https://server.com)
+    response=$(curl --connect-timeout 2 -s -I "https://$1")
 
     # Periksa apakah Curl berhasil
     if [[ $response == "" ]]; then
@@ -27,3 +27,5 @@ while true; do
     echo "$(date) : wait for looping"
     sleep 8
 done
+
+}
