@@ -1,6 +1,7 @@
 #!/bin/bash
 
 source "$PWD/../helper/airplane_mode.sh"
+source "$PWD/../log/log.sh"
 
 while true; do
     # Lakukan Curl ke server dan simpan output ke dalam variabel
@@ -9,9 +10,11 @@ while true; do
     # Periksa apakah Curl berhasil
     if [[ $response == "" ]]; then
         echo "$(date) : offline"
+        write_log "offline (no response)"
         get_suitable_host_on_smartphone
     elif [[ $response == *"HTTP/1.1 302"* ]]; then
         echo "$(date) : offline (302)"
+        write_log "offline (302)"
         get_suitable_host_on_smartphone
     elif [[ $response == *"HTTP/1.1 301"* ]]; then
         echo "$(date) : online(301)"

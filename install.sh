@@ -1,5 +1,5 @@
-wget -r -np https://github.com/adenafil/gracia/archive/main.zip
-mv /root/github.com/adenafil/gracia/archive/main.zip /root
-rm -rf github.com
-unzip main.zip
-rm -rf main.zip
+pkg update -y
+pkg upgrade -y
+pkg install git
+git clone https://github.com/adenafil/gracia.git
+cd gracia
