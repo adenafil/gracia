@@ -6,4 +6,3 @@ pkg upgrade -y
 pkg install git
 git clone https://github.com/adenafil/gracia.git
 cd gracia
-

@@ -6,7 +6,7 @@ directory=$(basename "$(pwd)")
 write_log() {
 
     if [ "$directory" == "gracia" ]; then
-    echo $PWD/log
+    # echo $PWD/log
     cd $PWD/log
     fi
 
