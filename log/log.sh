@@ -19,8 +19,8 @@ write_log() {
     # get log message from parameter 1
     pesan=$1
     # write log to file log
-    echo "$tanngal $waktu : $pesan" >> "$name_log_file"
+    echo -e "$tanngal $waktu : $pesan" >> "$name_log_file"
     
     cd $PWD/..
-    echo "im in $PWD"
+    # echo "im in $PWD"
 }

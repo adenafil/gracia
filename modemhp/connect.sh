@@ -4,13 +4,17 @@
 # source "$PWD/../log/log.sh"
 
 connect() {
-    write_log "$(date) : ============================================="
+    write_log "============================================="
+    write_log "$(date)"
     echo "============================================="
     write_log "gracia is succesfully started"
     echo "$(date) : gracia is succesfully started"
     while true; do
     # Lakukan Curl ke server dan simpan output ke dalam variabel
-    response=$(curl --connect-timeout 2 -s -I "https://$1")
+    response=$(get_response $1) 
+
+    #echo "result of response : "
+    #echo -e "$response";
 
     # Periksa apakah Curl berhasil
     if [[ $response == "" ]]; then
